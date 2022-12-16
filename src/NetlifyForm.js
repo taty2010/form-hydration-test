@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function NetlifyForm({formName, method, children}) {
+export default function NetlifyForm({formName, method, action, children}) {
   return (
     <form
       name={formName}
       method={method}
+      action={action}
       data-netlify
       data-netlify-honeypot="bot-field"
       suppressHydrationWarning={true}

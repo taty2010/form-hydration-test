@@ -4,7 +4,7 @@ import NetlifyForm from "./NetlifyForm";
 export default function Home() {
     return (
       <div >
-      <NetlifyForm formName="feedback" method="POST">
+      <NetlifyForm formName="feedback" method="POST" action="/success">
         <input type="hidden" name="form-name" value="feedback" />
         <p className="hidden">
           <label>
