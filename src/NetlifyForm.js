@@ -1,7 +1,15 @@
 import React from "react";
+import { useEffect, useState} from "react";
 
 export default function NetlifyForm({formName, method, action, children}) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
+    isMounted && (
     <form
       name={formName}
       method={method}
@@ -12,6 +20,7 @@ export default function NetlifyForm({formName, method, action, children}) {
     >
       {children}
     </form>
+    )
   );
 }
 
