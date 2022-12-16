@@ -1,9 +1,10 @@
+import React from "react";
 import NetlifyForm from "./NetlifyForm";
 
 export default function Home() {
     return (
       <div >
-      <NetlifyForm formName="feedback" method="POST" action="/success">
+      <NetlifyForm formName="feedback" method="POST">
         <input type="hidden" name="form-name" value="feedback" />
         <p className="hidden">
           <label>
